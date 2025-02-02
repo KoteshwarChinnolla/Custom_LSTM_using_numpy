@@ -8,7 +8,7 @@ So coming to LSTM which is applicable for time series data or continuous data fl
 
 Here is an example "YouTube is a great source of learning"
 
-As I mentioned RNN is a block so in this block we have a number of RNNs (same as sentence length) each RRN is capable of of processing one input. so first RNN processing input be "YouTube" and then the next RNN input be "is" and then "a" and so on until the last word. 
+As I mentioned RNN is a block so in this block we have a number of RNNs (same as sentence length) each RRN is capable of of processing one input. so first RNN cell process the input be "YouTube" and then the next RNN input be "is" and then "a" and so on until the last word. 
 
 Let's understand what's inside one RNN block. this block takes two inputs they are current time stamp input and the output of the previous RNN block. so every RNN block can process a single input that input is first added to the previous state output and both together will be passed through an activation function and the result from the activation function will be then sent as an output for the next state. this process continues until the last word of the sentence. 
 
@@ -20,9 +20,9 @@ LSTM is a kind of RNN architecture. let us understand **what makes it different 
 
 ![LSTM](https://github.com/KoteshwarChinnolla/Custom_LSTM_using_numpy/blob/main/images/lstn.png?raw=true)
 
-The LSTMs outperform RNNs when it comes to remembering the previous context. this is majorly due to the addition of memory cell C(t). important information from every cell will be stored 
+The LSTMs outperform RNNs when it comes to remembering the previous context. this is majorly due to the addition of memory cell C(t). important information from every cell will be stored or added to it and retrieved when processing for oputputs.
 
-![LSTM](https://github.com/KoteshwarChinnolla/Custom_LSTM_using_numpy/blob/main/images/lstn.png?raw=true)
+Like RNNs it is all similar that how the sentence or time series data will be sent to this LSTM block. the difference comes in the architecture of the cell. we have three gates. this discribed as forget gate, Input gate and output gate. where each has its own supperate functionality's. comming to memory LSTM have cell state which differentiate it from RNN.
 
 ![lstm basic](https://github.com/KoteshwarChinnolla/Custom_LSTM_using_numpy/blob/main/images/Lstm-Basic.png?raw=true)
 
