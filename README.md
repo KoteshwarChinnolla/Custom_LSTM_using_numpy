@@ -12,16 +12,15 @@ As I mentioned RNN is a block so in this block we have a number of RNNs (same as
 
 Let's understand what's inside one RNN block. this block takes two inputs they are current time stamp input and the output of the previous RNN block. so every RNN block can process a single input that input is first added to the previous state output and both together will be passed through an activation function and the result from the activation function will be then sent as an output for the next state. this process continues until the last word of the sentence. 
 
-How RNNs learn? until now we just looked at the forward pass. so before knowing how it learns let's understand what actually it learns. so this basically let's look at the human perspective. someone reading the sentence he/she can only understand the next words when he/she remembers the context of previous words. RNNs need to learn how to remember these and understand the whole sentence. to make this learn we must focus more on the previous context and present context. so basically the weights that must be focused here are one from the previous layer and one from the current layer. Previous layer weights are adjusted to make it pass maximum information to the next layer and present layer weights are adjusted to make it understand the importance of the current word. 
+**How RNNs learn?** Until now we just looked at the forward pass. so before knowing how it learns let's understand **what actually it learns**. so this basically let's look at the human perspective. someone reading the sentence he/she can only understand the next words when he/she remembers the context of previous words. RNNs need to learn how to remember these and understand the whole sentence. to make this learn we must focus more on the previous context and present context. so basically the weights that must be focused here are one from the previous layer and one from the current layer. Previous layer weights are adjusted to make it pass maximum information to the next layer and present layer weights are adjusted to make it understand the importance of the current word. 
 
 ![RNN image](https://images.datacamp.com/image/upload/v1647442110/image6_f6vds6.png)
 
+LSTM is a kind of RNN architecture. let us understand **what makes it different from RRN?** . when we certainly test the RNNs it might not be that accurate in remembering the context of the previous word. because if we consider a long sentence it will be very difficult to remember what is the relation between the first and last word is just because there is no separate memory cell assigned to it. How can someone remember if there is no memory valid right. to solve this case the LSTM comes into the picture.
 
+![LSTM](https://github.com/KoteshwarChinnolla/Custom_LSTM_using_numpy/blob/main/images/lstn.png?raw=true)
 
-
-LSTM's is kind of RNN architecture 
-
-RNN's are used when we are processing time-series datasets
+The LSTMs outperform RNNs when it comes to remembering the previous context. this is majorly due to the addition of memory cell C(t). important information from every cell will be stored 
 
 ![LSTM](https://github.com/KoteshwarChinnolla/Custom_LSTM_using_numpy/blob/main/images/lstn.png?raw=true)
 
